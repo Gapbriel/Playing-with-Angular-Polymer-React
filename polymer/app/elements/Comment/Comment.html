@@ -1,5 +1,6 @@
 <link rel="import" href="../../../bower_components/polymer/polymer.html">
 
+
 <dom-module id="comment-model">
     <template>
         <div class="comment">
@@ -7,12 +8,15 @@
                 <span id="author">{{author}}</span>
             </h2>
             <span id="msg">{{msg}}</span>
+            </br>
             <!--x-repeat in Alpha version does not allow to pass inner scope and use it as content-->
             <!-- <content/> -->
-
+             <comp-timeago datetime="{{time}}"></comp-timeago>
         </div>
     </template>
 </dom-module>
+
+
 
 <script>
     Polymer({
@@ -22,7 +26,8 @@
                 type: String,
                 value: ""
             },
-            msg: String
+            msg: String,
+            time: String
         }
     });
 </script>

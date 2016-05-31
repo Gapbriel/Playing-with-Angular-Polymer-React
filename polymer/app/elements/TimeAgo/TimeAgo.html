@@ -1,0 +1,29 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<script src="../../../bower_components/moment/min/moment.min.js"></script>
+
+<dom-module id="comp-timeago">
+  <template>- Comented <time datetime="[[datetime]]">[[timeago]]</time></template>
+</dom-module>
+
+<script>
+	Polymer({
+		is:"comp-timeago",
+
+	    properties: {
+	      timeago: {
+	        type: String,
+	        value: '',
+	        notify: true
+	      },
+	      datetime: {
+	        type: String
+	      }
+	    },
+
+	    ready: function () {
+	      var m = window.moment(this.datetime);
+	      this.set('timeago', m.fromNow());
+	    }
+
+	});
+</script>

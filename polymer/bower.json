@@ -12,6 +12,7 @@
     "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
   },
   "resolutions": {
-    "polymer": "^0.9.0"
+    "polymer": "^0.9.0",
+    "test-fixture": "^1.0.0"
   }
 }

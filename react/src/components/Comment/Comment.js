@@ -1,6 +1,7 @@
 'use strict';
 
 var React = require('react/addons');
+var TimeAgo = require('react-timeago');
 
 require('./Comment.css');
 
@@ -38,6 +39,7 @@ var CommentModel = React.createClass({
           {this.props.author}
         </h2>
         <span ref="msg">{this.props.children}</span>
+        <TimeAgo ref="dateTime" date="{this.props.author}" />
       </div>
     );
   }

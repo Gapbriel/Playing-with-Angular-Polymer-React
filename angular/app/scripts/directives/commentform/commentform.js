@@ -22,6 +22,7 @@ angular.module('commentForm', [])
           if (!comment.msg || !comment.author) {
             return;
           }
+          comment.time = Date.now();
           scope.$emit('submitted', comment);
           scope.comment = {};
         }

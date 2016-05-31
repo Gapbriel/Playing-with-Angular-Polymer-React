@@ -13,12 +13,18 @@ angular.module('comment', [])
                   '<h2 class="commentAuthor">' +
                       '{{author}}' +
                   '</h2>' +
+                  '<p class="commentTimeAgo">'+
+                   '-commented '+
+                   '<time-ago from-time="{{time}}">'+
+                   '</time-ago>' + 
+                   '</p></br>' +
                   '<ng-transclude></ng-transclude>' +
                 '</div>',
       restrict: 'E',
       transclude: true,
       scope: {
-        author: '@'
+        author: '@',
+        time:'@' 
       },
       link: function postLink(scope, element, attrs) {}
     };
